@@ -1,4 +1,11 @@
-<div class="task-list">
+<!--<div class="task-list">
     <div class="search"><input type="text" placeholder="search" /></div>
     <app-task-item *ngFor="let item of taskData" [taskName]="item.title"></app-task-item>
+</div>-->
+<div class="row">
+    <div class="col-sm-8">
+        <div class="container">
+            <app-task-item *ngFor="let item of taskData" [item]="item"></app-task-item>
+        </div>
+    </div>
 </div>

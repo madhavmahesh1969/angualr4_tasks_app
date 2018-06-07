@@ -1,4 +1,22 @@
-<div class="task-item">{{taskName}}
+<!--<div class="task-item">{{taskName}}
     <span class="arrow"></span>
     <span class="status"></span>
+</div>-->
+<div class="card">
+    <div class="row padding">
+        <div class="col-sm-1 text-center text-primary">
+            <i class="fa fa-pencil-square-o" aria-hidden="true" *ngIf="item.taskStatus === 'e'"></i>
+            <i class="fa fa-reply-all" aria-hidden="true" *ngIf="item.taskStatus === 'r'|| !item.taskStatus"></i>
+        </div>
+        <div class=" col-sm-4"><strong>{{item.title}}</strong>
+            <br/> {{item.date}}
+        </div>
+        <div class="col-sm-5"><strong>{{item.id}}</strong> <br/>{{item.idDesc}}
+        </div>
+        <div class=" col-sm-2">{{item.time}}
+        </div>
+        <!--<div class="card-body"></div>-->
+        <!--<span class="arrow"></span>
+    <span class="status"></span>-->
+    </div>
 </div>
